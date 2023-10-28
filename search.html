@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">{{> head}}{{> header}}
+  <article>
+    <h1>Archive (Search)</h1>{{> alltags}}
+    <p>
+    <form action="/search"><input placeholder="Type, then press Enter" value="{{#query}}{{query}}{{/query}}" name="q" id="search" type="text"> <a style="border:0" href="/archives">✕</a></form>
+    </p>
+  </article>
+  <div>
+    <h2>{{#entries}}{{#first}}{{#last}}Search: {{entries.length}} result {{/last}} {{^last}} Search: {{entries.length}} results {{/last}} {{/first}} {{/entries}} {{^entries}} {{#query}} Search: no results {{/query}} {{/entries}}</h2>{{#entries}}
+      <p><a href="{{{url}}}">{{title}}</a></p>
+    {{/entries}}
+  </div>
+  <div>
+    <dl>{{#archives}}{{#months}}
+          <dt>
+            <h2>{{month}} {{year}}</h2>
+          </dt>{{#entries}}
+            <dd>
+              <p><a style="border:0" href="{{{url}}}">{{title}}</a></p>
+            </dd>
+          {{/entries}}
+        {{/months}}{{/archives}}</dl>
+  </div>
+  <nav><a href="#top">Back to top</a>・<a href="/" title="Go back to homepage">Home</a>
+    <script type="text/javascript">
+      var search = document.getElementById("search");
+      search.focus()
+    </script>
+  </nav>
+
+</html>

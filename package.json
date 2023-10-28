@@ -1,0 +1,65 @@
+{
+  "name": "Jolly Source",
+  "locals": {
+    "page_size": "10",
+    "hide_dates": false,
+    "date_display": "D MMM YYYY"
+  },
+  "views": {
+    "search.html": {
+      "url": "/search",
+      "partials": {
+        "title": "Search・{{{title}}}",
+        "description": "Search all the entries posted on {{{title}}}",
+        "canonical": "{{{blogURL}}}/search"
+      }
+    },
+    "archives.html": {
+      "url": "/archives",
+      "partials": {
+        "title": "Archives・{{{title}}}",
+        "description": "All the entries posted on {{{title}}}",
+        "canonical": "{{{blogURL}}}/archives"
+      }
+    },
+    "head.html": {
+      "partials": {
+        "title": "{{{title}}}"
+      }
+    },
+    "entries.html": {
+      "partials": {
+        "title": "{{{title}}}",
+        "description": "{{{title}}}: {{{> description}}}",
+        "canonical": "{{{blogURL}}}{{#pagination.previous}}/page/{{pagination.current}}{{/pagination.previous}}"
+      }
+    },
+    "entry.html": {
+      "partials": {
+        "title": "{{{entry.title}}}・{{{title}}}",
+        "description": "{{{entry.summary}}}",
+        "canonical": "{{#entry}}{{{absoluteURL}}}{{/entry}}"
+      }
+    },
+    "error.html": {
+      "partials": {
+        "title": "{{{error.title}}}・{{{title}}}",
+        "description": "Error on {{{title}}}",
+        "canonical": "{{{blogURL}}}/error.html"
+      }
+    },
+    "header_home.html": {
+      "url": "/header_home"
+    },
+    "tagged.html": {
+      "partials": {
+        "title": "Entries tagged {{{tag}}} from {{{title}}}",
+        "description": "All of the entries posted on {{{title}}} tagged {{{tag}}}",
+        "canonical": "{{{blogURL}}}/{{{slug}}}"
+      }
+    },
+    "alltags.html": {
+      "url": "/alltags"
+    }
+  }
+}

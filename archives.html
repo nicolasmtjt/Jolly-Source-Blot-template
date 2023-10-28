@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">{{> head}}{{> header}}
+  <article>
+    <h1>Archive ({{all_entries.length}})</h1>{{> alltags}}
+    <p>🔎&nbsp;<a href="/search">Search this site</a></p>
+  </article>
+  <div>
+    <dl>{{#archives}} {{#months}}
+          <dt>
+            <h2>{{month}} {{year}}</h2>
+          </dt>{{#entries}}
+            <dd>
+              <p><a style="border:0" href="{{{url}}}">{{title}}</a></p>
+            </dd>
+          {{/entries}}
+        {{/months}}{{/archives}}</dl>
+  </div>
+  <nav><a href="#top">Back to top</a>・<a href="/" title="Go back to homepage">Home</a></nav>
+
+</html>
