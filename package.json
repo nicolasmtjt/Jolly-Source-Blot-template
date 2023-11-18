@@ -19,7 +19,7 @@
       "partials": {
         "title": "Archives・{{{title}}}",
         "description": "All the entries posted on {{{title}}}",
-        "canonical": "{{{blogURL}}}/archives"
+        "canonical": "{{{blogURL}}}/tagged/archives"
       }
     },
     "head.html": {
