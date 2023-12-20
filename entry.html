@@ -2,7 +2,7 @@
 <html lang="en">{{> head}}
 {{> header}}{{#entry}}
     <article itemscope itemtype="https://schema.org/BlogPosting">{{{html}}}</article>{{#date}}
-      <nav>Published <span itemprop="datePublished" content="{{dateStamp}}">{{date}}</span>・<a href="mailto:YOUREMAILADRESSHERE?Subject=Reply to: {{title}}&body= %0d%0a%0d%0aLink to post: {{absoluteURL}}">Reply by email</a>・<a href="/" title="Go back to homepage">Home</a></nav>
+      <nav>Published <time itemprop="datePublished" content="{{dateStamp}}">{{date}}</time>・<a href="mailto:YOUREMAILADRESSHERE?Subject=Reply to: {{title}}&body= %0d%0a%0d%0aLink to post: {{absoluteURL}}">Reply by email</a>・<a href="/" title="Go back to homepage">Home</a></nav>
     {{/date}}
   {{/entry}}
 
