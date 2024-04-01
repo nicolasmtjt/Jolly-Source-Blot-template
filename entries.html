@@ -5,9 +5,9 @@
   
   
   {{#entries}}<a href="{{{url}}}">
-      <div>
+      <nav>
         <h2>{{title}}</h2>{{{summary}}}&nbsp;→
-      </div>
+      </nav>
     </a>{{/entries}}
   <nav>Updated {{#recentEntries}}{{#first}}{{date}}{{/first}}{{/recentEntries}}{{#pagination}}{{#next}}・<a rel="next" href="/page/{{next}}">Previous entries</a>{{/next}}{{/pagination}}・<a href="/archives">Archive</a></nav>
 
